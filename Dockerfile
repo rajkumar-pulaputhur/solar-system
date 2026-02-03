@@ -9,8 +9,8 @@ RUN npm install
 COPY . .
 
 ENV MONGO_URI=uriPlaceholder
-##ENV MONGO_USERNAME=usernamePlaceholder
-##ENV MONGO_PASSWORD=passwordPlaceholder
+ENV MONGO_USERNAME=admin
+ENV MONGO_PASSWORD=anitha
 
 EXPOSE 3000
 

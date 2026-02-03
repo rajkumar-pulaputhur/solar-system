@@ -12,8 +12,8 @@ app.use(express.static(path.join(__dirname, '/')));
 app.use(cors())
 
 mongoose.connect("mongodb://localhost:27071", {
- //   user: process.env.MONGO_USERNAME,
- //   pass: process.env.MONGO_PASSWORD,
+    user: admin,
+    pass: anitha,
     useNewUrlParser: true,
     useUnifiedTopology: true
 }, function(err) {

@@ -29,6 +29,11 @@ pipeline {
                 sh "docker images | grep ${IMAGE_NAME}"
             }
         }
+        stage('run image') {
+            steps {
+                sh "docker run -d --network=node-net -p 3000:3000 ${IMAGE_NAME}:${IMAGE_TAG}"
+            }
+        }
     }
 
     post {
